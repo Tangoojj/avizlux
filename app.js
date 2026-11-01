@@ -48,7 +48,7 @@
     if (p.rec) badges += '<span class="badge rec">پیشنهاد آویزلوکس</span>';
     badges += '<span class="badge new">جدید</span>';
     var inCmp = cmp.indexOf(p.code) >= 0;
-    return '<article class="card' + (p.rec ? " rec" : "") + '">' +
+    return '<article class="card' + (p.rec ? " rec featured" : "") + '">' +
       '<div class="card-img-wrap" data-gal="' + p.code + '" role="button" aria-label="مشاهده‌ی عکس‌های ' + esc(p.name) + '">' +
         '<img class="card-img-top" src="' + IM[p.code][0] + '" alt="' + esc(p.name) + '" loading="lazy">' +
         '<div class="card-badges">' + badges + '</div></div>' +
@@ -57,7 +57,8 @@
         '<p class="card-spec">کد ' + faD(p.code) + ' • ابعاد ' + esc(p.dims) + ' • مناسب: ' + spacesFa(p) + '</p>' +
         '<div class="card-stars"><span class="stars">★★★★★</span><span>' + faD(String(p.rating)) + ' | ' + fa(p.sold) + ' فروش</span></div>' +
         '<div class="card-price"><span class="now">' + fa(p.price) + '</span> <span class="unit">تومان</span></div>' +
-        '<p class="card-inst">💳 امکان خرید قسطی</p>' +
+        '<p class="card-unit">قیمت یک عدد — تعداد رو موقع خرید مشخص می‌کنی</p>' +
+        (p.rec ? '<p class="card-tip">⭐ پیشنهاد ما برای اپن: سه‌تایی از همین مدل</p>' : '') +
       '</div>' +
       '<div class="card-footer">' +
         '<button class="btn-gold" style="flex:1" data-buy="' + p.code + '" type="button">خرید سریع</button>' +
@@ -143,7 +144,7 @@
     $("gName").textContent = p.name;
     $("gStars").textContent = "★★★★★ " + faD(String(p.rating));
     $("gSold").textContent = fa(p.sold) + " فروش";
-    $("gSpecs").innerHTML = "<span>کد " + faD(p.code) + "</span><span>ابعاد " + esc(p.dims) + "</span><span>" + esc(p.mat) + "</span><span>مناسب: " + spacesFa(p) + "</span><span>💳 امکان خرید قسطی</span>";
+    $("gSpecs").innerHTML = "<span>کد " + faD(p.code) + "</span><span>ابعاد " + esc(p.dims) + "</span><span>" + esc(p.mat) + "</span><span>مناسب: " + spacesFa(p) + "</span><span>پرداخت آنلاین امن</span>";
     $("gPrice").innerHTML = "<b>" + fa(p.price) + "</b> تومان";
     $("gMine").href = waMine(p);
     $("gThumbs").innerHTML = imgs.map(function (src, i) {

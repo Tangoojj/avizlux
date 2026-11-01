@@ -369,3 +369,13 @@ a{color:inherit}
 .adv-answer{color:var(--ink2);line-height:1.95;margin:14px 0 0;min-height:1.5em}
 .adv-answer:empty{display:none}
 @media (max-width:620px){.adv-cards{grid-template-columns:1fr}.adv-askrow{flex-direction:column}.adv-askrow input{width:100%}}
+
+/* v26 — تست «بدون دسته‌بندی»: نوار فیلتر فضا و مرتب‌سازی پنهان؛ چیدمان ثابت: پیشنهاد ما اول، بعد ارزان‌ترین */
+#chips, .grid-tools { display: none !important; }
+/* v26 — کارت برجسته‌ی «پیشنهاد آویزلوکس»: تمام‌عرض، قاب طلایی — لنگر توجه و پیش‌فرض انتخاب */
+.card.featured { grid-column: 1 / -1; border: 2px solid #C9A227; box-shadow: 0 10px 34px rgba(46,21,70,.16); }
+.card.featured .card-img-wrap { aspect-ratio: 16 / 9; }
+.card.featured .card-title { font-size: 1.25rem; }
+.card.featured .card-price .now { font-size: 1.5rem; }
+.card-unit { margin: 2px 0 0; font-size: .78rem; color: #7a7264; }
+.card-tip { margin: 6px 0 0; font-size: .85rem; font-weight: 700; color: #2E1546; background: #F3E9CF; border-radius: 8px; padding: 6px 9px; }
