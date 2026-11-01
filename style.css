@@ -117,9 +117,7 @@ a{color:inherit}
 .sort-wrap select{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line2);padding:5px 8px;margin-inline-start:6px}
 
 /* ---------- گرید مقاله‌ای (کارت‌های app.js) ---------- */
-.row-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-inline-start:1px solid var(--line)}
-.card.featured{grid-column:1/-1}
-.card.featured .card-img-top{aspect-ratio:16/10}
+.row-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-inline-start:1px solid var(--line)}
 .card{border-bottom:1px solid var(--line);border-inline-end:1px solid var(--line);padding:20px;background:transparent;transition:background .18s ease;display:flex;flex-direction:column}
 .card:hover{background:var(--card)}
 .card.rec{background:linear-gradient(180deg,rgba(227,170,78,.10),transparent 55%)}
@@ -145,11 +143,11 @@ a{color:inherit}
 .btn-buy:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(184,134,47,.3)}
 .btn-view{flex:1;background:transparent;color:var(--ink);border:1px solid var(--line2);padding:9px 10px;font-weight:600}
 .btn-view:hover{border-color:var(--ink)}
-@media (max-width:1023px){.row-grid{grid-template-columns:1fr}}
+@media (max-width:1023px){.row-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){
   .section{padding:60px 0}
-  .card{padding:14px}
-  .card-title{font-size:1rem}
+  .card{padding:12px}
+  .card-title{font-size:.92rem}
   .card-footer{flex-direction:column}
   .trust-item{flex-basis:140px;padding:14px 8px}
 }
